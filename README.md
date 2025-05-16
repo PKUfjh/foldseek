@@ -1,5 +1,19 @@
 
 # Foldseek 
+
+## Installation
+```bash
+conda create -n foldseek python=3.10
+conda activate foldseek
+conda install -c conda-forge -c bioconda foldseek
+```
+
+## Run
+```bash
+foldseek easy-search example/d1asha_ example/ aln tmpFolder --format-output "query,target,fident,alntmscore,qaln,taln"
+foldseek easy-cluster example/ res tmp -c 0.9 
+```
+
 Foldseek enables fast and sensitive comparisons of large protein structure sets, supporting monomer and multimer searches, as well as clustering. It runs on CPU, supports GPU acceleration for faster searches, and optionally allows ultra-fast and sensitive comparisons directly from protein sequence inputs using a language model, bypassing the need for structures.
 <p align="center"><img src="https://github.com/steineggerlab/foldseek/blob/master/.github/foldseek.png" height="250"/></p>
 
